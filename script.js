@@ -1,8 +1,14 @@
-function indexOfIgnoreCase(s1, s2) {
+function indexOfIgnoreCase(str, subStr) {
   // write your code here
+	str = str.toLowerCase();
+	subStr = subStr.toLowerCase();
+	if(!str.includes(subStr)){
+		return -1;
+	}
+	return str.indexOf(subStr);
 }
 
 // Please do not change the code below
-const s1 = prompt("Enter s1:");
-const s2 = prompt("Enter s2:");
-alert(indexOfIgnoreCase(s1, s2));
+const str = prompt("Enter str:");
+const subStr = prompt("Enter subStr:");
+alert(indexOfIgnoreCase(str, subStr));
